@@ -50,10 +50,10 @@ void sinx_taylor(int num_elements, int terms, double* x, double* result) {
 	    int index;
 	    double result_val;
 		
-	    if (read(fd[0], &index, sizeof(int)) == sizeof(int) &&
-		read(fd[0], &result_val, sizeof(double)) == sizeof(double)) {
-		    result[index] = result_val;
-	    } 
+	    read(fd[0], &index, sizeof(int));
+	    read(fd[0], &result_val, sizeof(double));
+
+	    result[index] = result_val; 
 	}
 
     close(fd[0]);
