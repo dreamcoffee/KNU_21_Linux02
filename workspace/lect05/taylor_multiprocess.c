@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define _USE_MATH_DEFINES
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
@@ -53,7 +52,6 @@ void sinx_tayler(int num_elements, int terms, double* x, double* result)
 		read(fd[2*child_id], line, MAXLINE); 
 
 		double res = atof(line);
-		printf("%d %lf %s\n", child_id, res, line);
 		result[child_id] = res;
 	}
 
@@ -71,3 +69,4 @@ int main()
 	}
 	return 0;
 }
+
